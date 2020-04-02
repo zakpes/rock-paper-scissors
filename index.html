@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Rock, Paper, Scissors</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <section id="game-board">
+
+            <div class="player-score">
+                <h2>Player 1 score:</h2>
+                <h1 class="player-1-score">0</h1>
+                <h2>Player 2 score:</h2>
+                <h1 class="player-2-score">0</h1>
+            </div>
+
+            <div class="result-container">
+                <h1 class="result-announce">Lets play!</h1>
+            </div>
+
+            <div class="game-table">
+
+                <!-- <h2>Player 1</h2> -->
+                <div id="player-square" class="player player-1">
+                    <h1 class="player-result player-1-result"></h1>
+                    <img class="img-responsive img-rps img-rock img-rock-cpu player-cpu" src="rock.png" alt="rock">
+                    <img class="img-responsive img-rps img-paper img-paper-cpu player-cpu" src="paper.png" alt="paper">
+                    <img class="img-responsive img-rps img-scissors player-cpu" src="scissors.png" alt="scissors">
+                    <!-- <img class="img-responsive img-rps" src="card-back.png" alt="card-back"> -->
+                </div>
+
+                <!-- <h2>Player 2</h2> -->
+                <div class="player player-2">
+                    <h1 class="player-result player-2-result"></h1>
+                    <img id="card-rock" class="img-responsive img-rps player-card img-rock" src="rock.png" alt="rock">
+                    <img class="img-responsive img-rps player-card img-paper" src="paper.png" alt="paper">
+                    <img id="card-scissors" class="img-responsive img-rps player-card img-scissors" src="scissors.png" alt="scissors">
+
+                    <!-- <img class="img-responsive img-rps" src="card-back.png" alt="card-back"> -->
+                    <!-- <div class="pick-hand"></div> -->
+                </div>
+            </div>
+
+            <div class="result-container btn-container">
+                <button class="btn btn-primary btn-play-again game-start" type="button" name="button">Start the game</button>
+
+            </div>
+
+
+
+        </section><!-- /#game-board -->
+
+
+        <script src="main-pick-card.js" charset="utf-8"></script>
+
+    </body>
+
+</html>

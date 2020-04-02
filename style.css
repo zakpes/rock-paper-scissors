@@ -1,0 +1,239 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh:
+}
+
+#game-board {
+    background-color: hsl(0, 0%, 10%);
+    min-height: 100vh;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.game-table {
+	background: hsl(189, 93.9%, 19.4%);
+	width: 650px;
+	margin: 0 auto 40px;
+	padding-top: 40px;
+	border: 10px solid firebrick;
+	border-radius: 10px;
+}
+
+.player-score {
+	position: fixed;
+	top: 38%;
+	left: 5%;
+	color: white;
+    text-align: center;
+}
+
+.player-1-score,
+.player-2-score {
+    display: inline-block;
+    height: auto;
+    width: 36px;
+    border-radius: 50%;
+}
+
+.player-1-score {
+    background-color: purple;
+}
+
+.player-2-score {
+    background-color: orange;
+}
+
+.player {
+    height: 300px;
+    width: 320px;
+    color: hsl(0, 0%, 100%);
+    margin: 0 auto;
+    /* cursor: pointer; */
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: center; */
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: bold;
+    position: relative;
+}
+
+/* .player-1 {
+    background-color: red;
+}
+
+.player-2 {
+    background-color: blue;
+} */
+
+.player-1-result, .player-2-result {
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.result-container {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, h2 {
+    font-family: sans-serif;
+    margin-top: 0;
+    padding: 0;
+}
+
+.result-announce {
+    margin-bottom: 0px;
+    color: white;
+    font-size: 40px;
+    display: inline-block;
+}
+
+.img-rps {
+    position: absolute;
+    -moz-user-select: none;
+    user-select: none;
+    transition: left 1s;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.player-card {
+    cursor: pointer;
+}
+
+.player-card:hover {
+    border-color: green;
+}
+
+.img-scissors-spread {
+    left: 100%;
+    /*animation-name: spread-cards-scissors;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-direction: alternate;*/
+}
+
+.img-rock-spread {
+    left: 0%;
+    /*animation: spread-cards-rock 1s forwards;*/
+}
+
+.active-card,
+.active-card:hover {
+    border-color: lightgreen;
+}
+
+/* .img-rps:hover .img */
+
+.img-rock-animation {
+    animation: hand-toggle 1s infinite;
+}
+
+.img-paper-animation {
+    animation: hand-toggle .5s infinite;
+}
+
+@keyframes hand-toggle {
+    50% {z-index: 2;}
+}
+
+@keyframes spread-cards-rock {
+    0% {left: 50%;}
+    100% {left: 0%;}
+}
+
+@keyframes spread-cards-scissors {
+    0% {left: 50%;}
+    100% {left: 100%;}
+}
+
+.winner-hand {
+    z-index: 3;
+}
+
+.btn-play-again {
+	position: relative;
+    display: inline-block;
+	cursor: pointer;
+	background: green;
+	color: white;
+	padding: 20px 30px;
+    border-width: 4px;
+	border-radius: 4px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn-play-again {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.btn-play-again:focus,
+.btn-play-again.focus {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #255625;
+}
+.btn-play-again:hover {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.btn-play-again:active,
+.btn-play-again.active,
+.open > .dropdown-toggle.btn-play-again {
+  color: #fff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.btn-play-again:active:hover,
+.btn-play-again.active:hover,
+.open > .dropdown-toggle.btn-play-again:hover,
+.btn-play-again:active:focus,
+.btn-play-again.active:focus,
+.open > .dropdown-toggle.btn-play-again:focus,
+.btn-play-again:active.focus,
+.btn-play-again.active.focus,
+.open > .dropdown-toggle.btn-play-again.focus {
+  color: #fff;
+  background-color: #398439;
+  border-color: #255625;
+}
+.btn-play-again:active,
+.btn-play-again.active,
+.open > .dropdown-toggle.btn-play-again {
+  background-image: none;
+}
+.btn-play-again.disabled:hover,
+.btn-play-again[disabled]:hover,
+fieldset[disabled] .btn-play-again:hover,
+.btn-play-again.disabled:focus,
+.btn-play-again[disabled]:focus,
+fieldset[disabled] .btn-play-again:focus,
+.btn-play-again.disabled.focus,
+.btn-play-again[disabled].focus,
+fieldset[disabled] .btn-play-again.focus {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+.pick-hand {
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.btn-container {
+    margin-bottom: 0;
+}
